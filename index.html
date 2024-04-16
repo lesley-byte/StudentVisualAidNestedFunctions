@@ -11,32 +11,31 @@
 <body>
     <div class="input-section">
         <label for="herbInput">1. herb = </label>
-        <input type="text" id="herbInput" placeholder="e.g., Basil" value="Basil" oninput="updateButtonLabel()">
+        <input type="text" id="herbInput" placeholder="e.g., Basil" value="Basil">
 
         <label for="careLevelInput">2. careLevel = </label>
         <input type="text" id="careLevelInput" placeholder="e.g., high" value="high">
     </div>
 
     <div class="function-display">
-        <p>3. function tendGarden(herb) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Watering ' + herb)<br>
+        <p>3. function tendGarden(careLevel) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;function waterHerbs(herb) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Caring with ' + careLevel + ' effort, time to
+            water the ' + herb);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;waterHerbs(herb);<br>
             }</p>
     </div>
 
     <div class="button-section">
-        <p>4.
-            <button id="tendGardenButton" onclick="runDemo()"
-                title="Click to call the tendGarden function and execute the code inside it. Nothing happens without this callback being called.">tendGarden(herb)</button>
-        </p>
+        <button id="tendGardenButton" onclick="runDemo()"
+            title="Click to execute the tendGarden function with the specified herb.">tendGarden('Basil')</button>
     </div>
 
     <h1>Console:</h1>
     <div id="console" class="console"></div>
 
-    <div class="stop-button">
-        <button onclick="stopGardening()">Stop</button>
-    </div>
-
+    <button onclick="stopGardening()">Stop</button>
     <script src="./scripts/script.js"></script>
 </body>
 

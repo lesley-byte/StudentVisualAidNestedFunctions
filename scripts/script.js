@@ -3,7 +3,12 @@ const herbInput = document.getElementById("herbInput");
 const careLevelInput = document.getElementById("careLevelInput");
 const tendGardenButton = document.getElementById("tendGardenButton");
 
-let isActive = true;
+// Function to update button text dynamically
+function updateButtonLabel() {
+  tendGardenButton.textContent = `tendGarden('${careLevelInput.value}')`;
+}
+
+herbInput.addEventListener("input", updateButtonLabel); // Update label on input
 
 function log(message) {
   const entry = document.createElement("div");
@@ -13,41 +18,27 @@ function log(message) {
   setTimeout(() => entry.classList.remove("highlight"), 1000); // Remove highlight after 1 second
 }
 
-function waterHerbs(moisture) {
-  if (!isActive) {
-    log("Gardening has been stopped.");
-    return;
-  }
-  log(
-    `Caring with ${careLevelInput.value} effort, time to water the ${moisture}`
-  );
-}
-
-function tendGarden() {
-  if (!isActive) {
-    log("Gardening has been stopped.");
-    return;
-  }
-  log("Starting to garden!");
+const tendGarden = (careLevel) => {
+  const waterHerbs = (moisture) => {
+    log(`Caring with ${careLevel} effort, time to water the ${moisture}`);
+  };
   waterHerbs(herbInput.value);
-}
+};
 
 function runDemo() {
   consoleDiv.innerHTML = ""; // Clear the console on each run
   if (confirm("Do you want to tend the garden?")) {
-    tendGarden();
+    tendGarden(careLevelInput.value);
   } else {
     log("Decided not to garden today.");
   }
 }
 
 function stopGardening() {
-  isActive = false;
-  log("Gardening is now paused. Refresh the page to start again.");
+  log("Gardening stopped. Refresh the page to start again.");
 }
 
-// function updateButtonLabel() {
-//   let herbName = herbInput.value.trim();
-//   herbName = herbName ? herbName : "Basil"; // Default to Basil if input is empty
-//   tendGardenButton.innerHTML = `Call tendGarden('${herbName}')`;
-// }
+// Initialize button label on page load
+document.addEventListener("DOMContentLoaded", () => {
+  updateButtonLabel();
+});
