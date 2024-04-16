@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesting Demo</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="input-section">
+        <label for="herbInput">1. herb = </label>
+        <input type="text" id="herbInput" placeholder="e.g., Basil" value="Basil" oninput="updateButtonLabel()">
+
+        <label for="careLevelInput">2. careLevel = </label>
+        <input type="text" id="careLevelInput" placeholder="e.g., high" value="high">
+    </div>
+
+    <div class="function-display">
+        <p>function tendGarden(herb) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log()<br>
+            }</p>
+    </div>
+
+    <div class="button-section">
+        <p>3.
+            <button id="tendGardenButton" onclick="runDemo()">tendGarden(herb)</button>
+        </p>
+    </div>
+
+    <h1>Console:</h1>
+    <div id="console" class="console"></div>
+
+    <div class="stop-button">
+        <button onclick="stopGardening()">Stop</button>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
