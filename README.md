@@ -1,5 +1,7 @@
 # Nesting Functions Demonstration
 
+![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg)
+
 ## Overview
 
 This project is a simple web demonstration designed to help students learn about JavaScript function nesting and scope. It visually represents how functions are called and how variables are passed and manipulated within nested functions.
@@ -11,18 +13,14 @@ This project is a simple web demonstration designed to help students learn about
 - **Console Output**: A simulated console shows what happens when functions are called, including any console log outputs.
 - **Control Buttons**: Users can execute the functions with customized parameters and stop the function execution as needed.
 
-## Prerequisites
+## Screenshot
 
-Before you can run this project, you'll need the following installed:
+![Nesting Functions Demonstration](./images/screenshot.jpeg)
+_Screenshot of the Nesting Functions Demonstration interface_
 
-- Any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.)
+## Accessing the Demo
 
-## Setup and Installation
-
-No installation is necessary. To get started with this project:
-
-1. Clone the repository to your local machine using:
-2. Open the `index.html` file in your web browser.
+You can access the live demo of this project at [Nesting Functions Demonstration](https://lesley-byte.github.io/StudentVisualAidNestedFunctions/). No installation or local setup is required, simply visit the link to begin exploring the functionality.
 
 ## Usage
 
