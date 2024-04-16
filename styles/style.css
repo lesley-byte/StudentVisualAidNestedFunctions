@@ -1,71 +1,89 @@
-/* Global settings */
-body,
-input,
-button,
-label {
-  font-family: "Courier New", monospace; /* Consistent font across all text */
+/* General body and background styling */
+body {
+  font-family: "Courier New", monospace;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Section styling */
+/* Styling for input sections */
 .input-section {
-  background-color: #f4f4f4;
+  background-color: #252526;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #3c3c3c;
   margin-bottom: 20px;
 }
 
+/* Styling for function display to mimic code editor */
 .function-display {
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #1e1e1e;
+  border: 1px solid #3c3c3c;
   padding: 10px;
   margin: 10px 0;
+  color: #9cdcfe; /* Light blue color for function and parameters */
+  font-family: "Courier New", monospace;
 }
 
-.button-section {
-  margin-top: 10px;
-}
-
+/* Console output styling for better visibility */
 .console {
   height: 300px;
-  background-color: #000;
-  color: #fff;
-  border: none;
+  background-color: #1e1e1e;
+  color: #ce9178; /* Soft orange for text */
+  border: 1px solid #3c3c3c;
   padding: 10px;
+  font-family: "Courier New", monospace;
   overflow-y: auto;
 }
 
-/* Button styling */
+/* Button styling to match the dark theme */
 button {
   padding: 10px 20px;
   font-size: 16px;
-  margin-top: 10px;
-  background-color: #4caf50; /* Green */
+  background-color: #007acc; /* VS Code blue */
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #005a9e;
 }
 
-.stop-button {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Input styling */
+/* Input styling to match dark theme */
 input {
   margin-bottom: 10px;
   padding: 8px;
+  font-family: "Courier New", monospace;
+  background-color: #333;
+  color: #dcdcdc;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
 }
 
-/* Label styling */
+/* Label styling for clarity */
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #9cdcfe;
+}
+
+/* Specific styling for stop button */
+.stop-button {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #a1260d; /* Red */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.stop-button button {
+  background-color: #a1260d; /* Make sure the button inherits this */
+}
+
+.stop-button button:hover {
+  background-color: #7f1d0a; /* Darker red on hover */
 }
